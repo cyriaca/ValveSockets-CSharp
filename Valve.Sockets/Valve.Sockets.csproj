@@ -1,0 +1,99 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <DefineConstants>VALVESOCKETS_SPAN</DefineConstants>
+        <LangVersion>9</LangVersion>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <!--<GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>CS1591</NoWarn>-->
+        <NoWarn>NU5100</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Authors>nxrighthere</Authors>
+        <Description>Managed C# abstraction of GameNetworkingSockets library by Valve Software</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Copyright>Copyright (c) 2018 Stanislav Denisov</Copyright>
+        <PackageProjectUrl>https://github.com/nxrighthere/ValveSockets-CSharp</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/nxrighthere/ValveSockets-CSharp</RepositoryUrl>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackOnBuild>true</PackOnBuild>
+        <Company>Cyriaca</Company>
+        <Owners>Cyriaca</Owners>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <PackageVersion>1.3.0-alpha.1</PackageVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="System.Memory" Version="4.5.4"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="..\ValveSockets.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="GameNetworkingSockets.dll">
+            <Link>%(FileName)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <PackagePath>contentFiles/any/any/</PackagePath>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+        <Content Include="libcrypto.1.1.dylib">
+            <Link>%(FileName)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <PackagePath>contentFiles/any/any/</PackagePath>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+        <Content Include="libcrypto.so.1.1">
+            <Link>%(FileName)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <PackagePath>contentFiles/any/any/</PackagePath>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+        <Content Include="libcrypto-1_1-x64.dll">
+            <Link>%(FileName)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <PackagePath>contentFiles/any/any/</PackagePath>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+        <Content Include="libGameNetworkingSockets.dylib">
+            <Link>%(FileName)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <PackagePath>contentFiles/any/any/</PackagePath>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+        <Content Include="libGameNetworkingSockets.so">
+            <Link>%(FileName)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <PackagePath>contentFiles/any/any/</PackagePath>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+        <Content Include="libprotobuf.26.dylib">
+            <Link>%(FileName)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <PackagePath>contentFiles/any/any/</PackagePath>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+        <Content Include="libprotobuf.dll">
+            <Link>%(FileName)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <PackagePath>contentFiles/any/any/</PackagePath>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+        <Content Include="libprotobuf.so.10">
+            <Link>%(FileName)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <PackagePath>contentFiles/any/any/</PackagePath>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+    </ItemGroup>
+</Project>
